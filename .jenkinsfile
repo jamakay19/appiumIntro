@@ -1,0 +1,44 @@
+pipeline {
+    agent any
+    stages{
+        stage('Build'){
+            steps{
+                    bat echo "execiting Build job"
+            }
+        }
+        stage('Deploy to Dev'){
+            steps{
+                    bat echo "executing Deploy to Dev"
+            }
+        }
+        stage('Unit tests'){
+            step{
+                    bat echo "run unit tests"
+            }
+        }
+        stage ('Production'){
+            step{
+                bat echo "releasing the job"
+            }
+        }
+        stage ('Deploy to Testing environment'){
+            step{
+                bat echo "executing deploy to Test"
+            }
+        }
+        stage ('Deploy to stage base in jenkins'){
+            step{
+                bat echo "Executing and deploying stage in Jenkins"
+            }
+        }
+        stage('Quality assurance'){
+            step {
+                bat echo "quality assurance is it"
+            }
+        }
+    }
+}
+
+
+
+
